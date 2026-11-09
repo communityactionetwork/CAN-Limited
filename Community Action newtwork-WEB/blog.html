@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with the latest news, stories, and videos from Community Action Network, a nonprofit dedicated to empowering communities.">
+    <meta name="keywords" content="nonprofit, community action, news, blog, updates, videos, education, health, sustainability">
+    <meta name="author" content="Community Action Network">
+    <meta name="robots" content="index, follow">
+    <title>Community Action Network - Blog & News</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:wght@400;500&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/jpg" href="images/CAN LOGO.jpg">
+    <style>
+        /* CSS Variables for Consistent Theming */
+        :root {
+            --primary-color: #003087;
+            --secondary-color: #0077b6;
+            --accent-color: #ff4d6d;
+            --background-color: #f7f9fc;
+            --text-color: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --shadow-light: 0 6px 16px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Global Reset and Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility Classes */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            box-shadow: var(--shadow-light);
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        nav a:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 1.5rem;
+            background-color: #fff;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .blog-container, .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            margin-top: 4rem;
+        }
+
+        /* Card Styles */
+        .blog-card, .video-card {
+            background-color: var(--background-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover, .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-card img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            loading: lazy;
+        }
+
+        .blog-card img:hover {
+            transform: scale(1.02);
+        }
+
+        .blog-card h3, .video-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.25rem, 3vw, 1.625rem);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card p, .video-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card .date {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card a, .video-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .blog-card a:hover, .video-card a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: none;
+        }
+
+        /* News Table Styles */
+        .news-table-container {
+            max-width: 1280px;
+            margin: 4rem auto;
+        }
+
+        .news-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--background-color);
+            box-shadow: var(--shadow-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .news-table th, .news-table td {
+            padding: 1rem;
+            text-align: left;
+            font-size: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .news-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .news-table tr:hover {
+            background-color: #e6f0fa;
+        }
+
+        .news-table a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .news-table a:hover, .news-table a:focus {
+            color: var(--accent-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer li {
+            margin: 0 1.5rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        footer a:hover, footer a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+
+            header h1 {
+                font-size: clamp(1.75rem, 4vw, 2rem);
+            }
+
+            header p {
+                font-size: clamp(0.875rem, 2.5vw, 1rem);
+            }
+
+            nav li {
+                margin: 0 0.75rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .blog-container, .video-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-card, .video-card {
+                padding: 1.5rem;
+            }
+
+            .news-table th, .news-table td {
+                font-size: 0.875rem;
+                padding: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            h2 {
+                font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+            }
+
+            .news-table {
+                font-size: 0.75rem;
+            }
+
+            .news-table th, .news-table td {
+                padding: 0.5rem;
+            }
+        }
+
+        /* Accessibility Enhancements */
+        a:focus, button:focus, [role="button"]:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header aria-labelledby="site-title">
+        <img src="images/CAN LOGO.jpg" alt="Community Action Network Logo" width="160" height="auto" loading="lazy" style="border-radius: 13px;">
+        <h1 id="site-title">Community Action Network</h1>
+        <p>Help Our Future Generation Thrive</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="volunteer.html">Get Involved</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Blog Section -->
+        <section aria-labelledby="blog-heading">
+            <h2 id="blog-heading">Blog & News Updates</h2>
+            <div class="blog-container">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <img src="images/Orphans.jpg" alt="Looking after the orphans" width="100%" height="auto" loading="lazy">
+                    <h3>Taking care of the orphans</h3>
+                    <p>In a touching moment of personal commitment and generosity, Community Action Network known for its unwavering support of vulnerable children recently visited the nursery and primary school where many of the orphans it cares for study. The visit served as a powerful reminder of the profound impact that the organization’s dedication can have on the lives of children who have lost their parents.</p>
+                    <a href="#" aria-label="Read more about the new school opening">Read More</a>
+                </article>
+
+                <article class="blog-card">
+                    <img src="images/school.jpg" alt="School building in rural community" width="100%" height="auto" loading="lazy">
+                    <h3>School Opens in Rural Community</h3>
+                    <p class="date">May 5, 2026</p>
+                    <p>We’re thrilled to announce the opening of a new school, providing education to over 50 children in underserved areas. This milestone achievement brings quality education closer to those who need it most, with modern facilities and dedicated teachers.</p>
+                    <a href="#" aria-label="Read more about the new school opening">Read More</a>
+                </article>
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <img src="images/newhealth.jpg" alt="Health campaign providing medical services" width="100%" height="auto" loading="lazy">
+                    <h3>Health Campaign Reaches 50 Families</h3>
+                    <p class="date">June 20, 2026</p>
+                    <p>Our latest health initiative provided free vaccinations and wellness checks to over 1,000 families. This campaign focused on preventive care, ensuring healthier futures for communities in need.</p>
+                    <a href="#" aria-label="Read more about the health campaign">Read More</a>
+                </article>
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <img src="images/garden.jpg" alt="Community garden project" width="100%" height="auto" loading="lazy">
+                    <h3>Community Garden Project Takes Root</h3>
+                    <p class="date">July 10, 2026</p>
+                    <p>Our new community garden initiative promotes sustainable living and provides fresh produce to local families. Volunteers and residents are working together to cultivate a brighter, greener future.</p>
+                    <a href="#" aria-label="Read more about the community garden project">Read More</a>
+                </article>
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <img src="images/youth.jpg" alt="Youth mentorship program" width="100%" height="auto" loading="lazy">
+                    <h3>Youth Mentorship Program Expands</h3>
+                    <p class="date">August 19, 2026</p>
+                    <p>Our mentorship program now supports 150 more young individuals, offering guidance and skills development to empower the next generation of leaders.</p>
+                    <a href="#" aria-label="Read more about the youth mentorship program">Read More</a>
+                </article>
+                <!-- Blog Post 5 (New) -->
+                <article class="blog-card">
+                    <img src="images/cleanwater.jpg" alt="Clean water initiative in community" width="100%" height="auto" loading="lazy">
+                    <h3>Clean Water Initiative Launched</h3>
+                    <p class="date">August 27, 2026</p>
+                    <p>Our new clean water project has installed water purification systems in three villages, providing safe drinking water to over 500 households.</p>
+                    <a href="#" aria-label="Read more about the clean water initiative">Read More</a>
+                </article>
+                <!-- Blog Post 6 (New) -->
+                <article class="blog-card">
+                    <img src="images/power3.jpg" alt="Women's empowerment workshop" width="100%" height="auto" loading="lazy">
+                    <h3>Women's Empowerment Workshop Success</h3>
+                    <p class="date">September 15, 2026</p>
+                    <p>Our recent workshop empowered 100 women with skills in entrepreneurship and leadership, fostering economic independence in their communities.</p>
+                    <a href="#" aria-label="Read more about the women's empowerment workshop">Read More</a>
+                </article>
+            </div>
+
+            <!-- News Table -->
+           <div class="news-table-container">
+    <h2 id="news-table-heading">Recent News Highlights</h2>
+    <table class="news-table" aria-labelledby="news-table-heading">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Summary</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Clean Water Initiative Launched</td>
+                <td>Installed water purification systems in three villages, benefiting 500+ households.</td>
+                <td><a href="clean-water-initiative.html" aria-label="Read more about the clean water initiative">Read More</a></td>
+            </tr>
+            <tr>
+                <td>School Opens</td>
+                <td>Opened a school for 200 children with modern facilities in a rural area.</td>
+                <td><a href="new-school-opening.html" aria-label="Read more about the new school opening">Read More</a></td>
+            </tr>
+            <tr>
+                <td>Health Campaign Success</td>
+                <td>Provided vaccinations and wellness checks to 1,000 families.</td>
+                <td><a href="health-campaign-success.html" aria-label="Read more about the health campaign">Read More</a></td>
+            </tr>
+            <tr>
+                <td>Community Garden Project</td>
+                <td>Launched a sustainable garden initiative for local families.</td>
+                <td><a href="community-garden-project.html" aria-label="Read more about the community garden project">Read More</a></td>
+            </tr>
+            <tr>
+                <td>Youth Mentorship Expansion</td>
+                <td>Expanded mentorship program to support 150 more young individuals.</td>
+                <td><a href="youth-mentorship-expansion.html" aria-label="Read more about the youth mentorship program">Read More</a></td>
+            </tr>
+            <tr>
+                <td>Elder Persons</td>
+                <td>Expanding a mentorship program to support  elders.</td>
+                <td><a href="elder-mentorship-expansion.html" aria-label="Read more about the youth mentorship program">Read More</a></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+            <!-- Video Section -->
+            <h2 id="video-heading">Featured Video</h2>
+            <div class="video-container">
+                <!-- Video 1 -->
+                <article class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4B5dpBVst0A?si=p5USFjLEJYbDksUG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>School Opening Ceremony Highlights</h3>
+                    <p>Watch the heartwarming moments from the grand opening of our new school, where community members and students celebrated a new chapter in education.</p>
+                </article>
+
+                 <article class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GVhd6qSxXZY?si=ukMqHNjzFAJcC4lV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>Women's Empowerment Workshop Success Highlights</h3>
+                    <p>Our recent workshop empowered 20+ women with skills in entrepreneurship and leadership, fostering economic independence in their communities.</p>
+                </article>
+
+                <article class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3fuAN3qhClI?si=FRb7lt5uAqVdZy31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>Taking care of the orphans</h3>
+                    <p>The visit served as a powerful reminder of the profound impact that the organization’s dedication can have on the lives of children who have lost their parents.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer aria-label="Footer navigation">
+        <p>© 2025 Community Action Network. All Rights Reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

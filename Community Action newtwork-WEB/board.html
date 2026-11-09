@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Board of Directors of Community Action Network, guiding our mission to empower communities through education, health, and economic initiatives.">
+    <meta name="keywords" content="nonprofit, board of directors, community action, leadership">
+    <meta name="author" content="Community Action Network">
+    <title>Community Action Network - Board of Directors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="images/CAN LOGO.jpg">
+    <style>
+        /* Director Card Styles */
+        .director-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .director-card {
+            background-color: #f7f9fc;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            max-width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .director-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .director-card img {
+            width: 80%; /* Reduced from 100% to make images smaller */
+            max-width: 200px; /* Added max-width to constrain size */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #0077b6;
+        }
+        .director-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 12px;
+            color: #1a1a1a;
+        }
+        .director-card p.position {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #0077b6;
+            margin: 0 0 12px;
+            font-weight: 500;
+        }
+        .director-card p.bio {
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin: 0;
+        }
+        /* Group Image Section Styles */
+        .group-image-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .group-image-container img {
+            max-width: 80%; /* Reduced from 100% to make the group image smaller */
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #0077b6;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+        .group-image-container p {
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin: 20px 0 0;
+        }
+    </style>
+</head>
+<body style="margin: 0; font-family: 'Lora', serif; background-color: #f7f9fc; color: #1a1a1a;">
+    <!-- Header Section -->
+    <header style="background-color: #003087; color: white; text-align: center; padding: 50px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="images/CAN LOGO.jpg" alt="Community Action Network Logo" style="max-width: 100px; margin-bottom: 15px; border-radius: 13px;"> 
+        <h1 style="margin: 0; font-family: 'Poppins', sans-serif; font-size: 44px; font-weight: 700; letter-spacing: 1px;">Community Action Network</h1>
+        <p style="font-size: 20px; margin: 10px 0; font-weight: 400; letter-spacing: 0.5px; max-width: 600px; margin-left: auto; margin-right: auto;">Help Our Future Generation Thrive</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav style="background-color: #0077b6; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <a href="index.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Home</a>
+        <a href="about.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">About</a>
+        <a href="blog.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Blog & News</a>
+        <a href="volunteer.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Get Involved</a>
+        <a href="board.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Board of Directors</a>
+        <a href="donate.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Donate</a>
+        <a href="contact.html" style="color: white; text-decoration: none; margin: 0 30px; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Contact</a>
+    </nav>
+
+    <!-- Board of Directors Section -->
+    <section style="padding: 80px 20px; text-align: center; background-color: #fff;">
+        <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; margin-bottom: 50px; font-weight: 700; color: #1a1a1a;">Our Board of Directors</h2>
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <p style="font-family: 'Lora', serif; font-size: 18px; line-height: 1.8; margin-bottom: 50px; color: #4a4a4a;">Meet the dedicated leaders who guide Community Action Network's mission to empower communities through education, health, and economic initiatives. Our board brings diverse expertise and a shared commitment to creating lasting impact.</p>
+            <div class="director-container">
+                <!-- Director 1 -->
+                <div class="director-card">
+                    <img src="images/Ibrahim Iggah.jpg" alt="Iggah Ibrahim">
+                    <h3>Iggah Ibrahim</h3>
+                    <p class="position">Chairman</p>
+                    <p class="bio">Ibrahim earned a Diploma in Event Management. He then moved into the nonprofit sector as a Program Manager, advanced to Business Development Manager, and later took on a Nonprofit Leadership role. With over a decade of experience in nonprofit leadership, business management, and event planning, Ibrahim drives strategic initiatives for community development.</p>
+                </div>
+
+                 <div class="director-card">
+                    <img src="images/yunus.jpg" alt="Buwembo Yunus">
+                    <h3>Buwembo Yunus</h3>
+                    <p class="position">Vice Chairman</p>
+                    <p class="bio">Mr. Yunus holds a Bachelor’s Degree in Education with over 20 years of experience in teaching. Using his leadership skills, Mr. Buwembo Yunus enhances organizational performance through expert leadership, strategic vision, and effective team coordination, skillfully managing projects, developing talent, and driving innovation across the organization.</p>
+                </div>
+
+                <div class="director-card">
+                    <img src="images/Nalubega Sarah.jpg" alt="Sarah Nalubega">
+                    <h3>Sarah Nalubega</h3>
+                    <p class="position">Treasurer</p>
+                    <p class="bio">Sarah holds a Bachelor’s Degree in Mass Communication and is a public health expert in integrative medicine. As the treasurer of our organization, she oversees financial strategy, ensuring effective resource allocation to support our mission. With a passion for advancing community wellness programs and advocacy, she significantly enhances our organization’s impact.</p>
+                </div>
+                <!-- Director 3 -->
+                <div class="director-card">
+                    <img src="images/Mukhusin Iggah.jpg" alt="Mukhusin Iggah">
+                    <h3>Mukhusin Iggah</h3>
+                    <p class="position">Secretary</p>
+                    <p class="bio">Mukhusin holds a Bachelor’s Degree in Computer Science. He enhances organizational performance through expert coding, research, and technology management, effectively coordinating schedules, developing software, and driving innovation.</p>
+                </div>
+                
+                   <div class="director-card">
+                    <img src="images/Matovu JohnPaul.jpg" alt="Matovu JohnPaul">
+                    <h3>Matovu JohnPaul</h3>
+                    <p class="position">Chief Coordinator</p>
+                    <p class="bio">Matovu JohnPaul is a Software Engineering professional who leads and oversees all coordinators at Community Action Network Limited. He drives effective programme coordination, organisational development and innovation through technical expertise and strategic leadership.</p>
+                </div>
+
+                <div class="director-card">
+                    <img src="images/Sekitoleko Bashir.jpg" alt="Sekitoleko Bashir">
+                    <h3>Sekitoleko Bashir</h3>
+                    <p class="position">Publicity</p>
+                    <p class="bio">Dr. Bashir holds a Diploma in Veterinary Medicine and Animal Husbandry. As a distinguished director of our organization, he leverages his expertise to facilitate robust communication and exemplary governance, ensuring cohesive alignment with our strategic objectives.</p>
+                    </div>
+                
+                <div class="director-card">
+                    <h3>Staff members</h3>
+                    <p class="bio">
+                         1. Sheik Abdul Aziz Bogele Over-all Co-ordinator <br>
+                        2. Sheik Mukasa Siragi Co-ordinator Kampala<br>
+                        3. Sheik Umar Kyeyune Co-ordinator Mbarara <br>
+                        4. Sheik Sulaiman Kasilye Co-ordinator Ibanda <br>
+                        5. Co-ordinator Isingiro
+                    </p>
+           </div>
+  <a 
+    href="contact.html"
+    class="board-contact-btn"
+    style="
+      display: inline-block;
+      background-color: #ff4d6d;
+      color: white;
+      padding: 16px 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 50px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    "
+    onmouseover="this.style.backgroundColor='#d0004f'; this.style.transform='scale(1.05)';"
+    onmouseout="this.style.backgroundColor='#ff4d6d'; this.style.transform='scale(1)';"> Contact Our Board </a>
+</div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #003087; color: white; text-align: center; padding: 50px 20px;">
+        <p style="margin: 0; font-size: 16px; font-weight: 400;">© 2025 Community Action Network. All Rights Reserved.</p>
+        <p style="margin: 20px 0; font-size: 16px;">
+            <a href="contact.html" style="color: #0077b6; text-decoration: none; margin: 0 20px; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='#0077b6'; this.style.transform='scale(1)';">Contact Us</a>
+            <a href="donate.html" style="color: #0077b6; text-decoration: none; margin: 0 20px; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='#0077b6'; this.style.transform='scale(1)';">Donate</a>
+            <a href="volunteer.html" style="color: #0077b6; text-decoration: none; margin: 0 20px; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='#0077b6'; this.style.transform='scale(1)';">Volunteer</a>
+            <a href="documents/Memorandum and Articles of Association FOR COMMUNITY ACTION NETWORK LIMITED-1(1).pdf" target="_blank" style="color: #0077b6; text-decoration: none; margin: 0 20px; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='#0077b6'; this.style.transform='scale(1)';">Memorandum</a>
+        </p>
+    </footer>
+</body>
+</html>

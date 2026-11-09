@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the Community Action Network's expanded mentorship program supporting 150 additional senior citizens with guidance and community engagement.">
+    <meta name="keywords" content="nonprofit, community action, elder mentorship, senior citizens, older adults, community support">
+    <meta name="author" content="Community Action Network">
+    <meta name="robots" content="index, follow">
+    <title>Elder Mentorship Program Expansion - Community Action Network</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:wght@400;500&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/jpg" href="images/CAN LOGO.jpg">
+    <style>
+        /* CSS Variables for Consistent Theming */
+        :root {
+            --primary-color: #003087;
+            --secondary-color: #0077b6;
+            --accent-color: #ff4d6d;
+            --background-color: #f7f9fc;
+            --text-color: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --shadow-light: 0 6px 16px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Global Reset and Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility Classes */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            box-shadow: var(--shadow-light);
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        nav a:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 1.5rem;
+            background-color: #fff;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        /* Article Content Styles */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            loading: lazy;
+        }
+
+        .article-content img:hover {
+            transform: scale(1.02);
+        }
+
+        .article-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.25rem, 3vw, 1.625rem);
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            list-style: disc;
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .article-content a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .article-content a:hover, .article-content a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .article-content .date {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        /* CTA Button Styles */
+        .cta-button {
+            display: block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 300px;
+            box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            background-color: #e6395b;
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255, 77, 109, 0.7);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer li {
+            margin: 0 1.5rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        footer a:hover, footer a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+
+            header h1 {
+                font-size: clamp(1.75rem, 4vw, 2rem);
+            }
+
+            header p {
+                font-size: clamp(0.875rem, 2.5vw, 1rem);
+            }
+
+            nav li {
+                margin: 0 0.75rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .article-content {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 0.9rem 1.5rem;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            h2 {
+                font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: none;
+                padding: 0.9rem;
+            }
+        }
+
+        /* Accessibility Enhancements */
+        a:focus, button:focus, [role="button"]:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header aria-labelledby="site-title">
+        <img src="images/CAN LOGO.jpg" alt="Community Action Network Logo" width="160" height="auto" loading="lazy">
+        <h1 id="site-title">Community Action Network</h1>
+        <p>Help Our Future Generation Thrive</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="page1.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="volunteer.html">Get Involved</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section aria-labelledby="article-heading">
+            <h2 id="article-heading">Elder Mentorship Program Expansion</h2>
+            <article class="article-content">
+                <span class="date">May 30, 2025</span>
+                <img src="images/elder-mentorship.jpg" alt="Senior citizens participating in mentorship program" width="100%" height="auto" loading="lazy">
+                <p>We are excited to announce the expansion of our mentorship program to support 100 additional senior citizens, bringing guidance, connection, and new opportunities to older adults in our community. This initiative, launched on May 30, 2025, aims to empower seniors by providing tailored mentorship in key areas such as technology, wellness, and social engagement.</p>
+                
+                <h3>Why Support Senior Citizens?</h3>
+                <p>Older adults bring a wealth of experience and wisdom to our communities, yet many face challenges like social isolation, limited access to technology, or difficulty navigating modern resources. Our expanded mentorship program addresses these needs by connecting seniors with trained mentors who offer personalized support.</p>
+                
+                <h3>Program Highlights</h3>
+                <ul>
+                    <li><strong>Digital Literacy:</strong> Mentors teach seniors how to use smartphones, tablets, and apps like video calls or social media to stay connected with family and friends.</li>
+                    <li><strong>Wellness Support:</strong> Workshops focus on mental and physical health, offering guidance on stress management, nutrition, and staying active.</li>
+                    <li><strong>Community Engagement:</strong> Group activities and storytelling sessions help seniors build social bonds and share their experiences with others.</li>
+                    <li><strong>Personalized Mentorship:</strong> Each senior is paired with a mentor who provides one-on-one support tailored to their unique needs and interests.</li>
+                </ul>
+
+                <h3>Impact and Goals</h3>
+                <p>The program’s expansion will reach 150 more seniors across local communities, fostering a sense of belonging and empowerment. Early feedback from participants highlights improved confidence in using technology and stronger community ties. Our goal is to reduce isolation, enhance quality of life, and celebrate the contributions of older adults.</p>
+
+                <h3>Get Involved</h3>
+                <p>We’re seeking volunteers to serve as mentors and local partners to support this initiative. If you’re interested in helping seniors thrive, visit our <a href="volunteer.html">Get Involved</a> page or <a href="donate.html">donate</a> to fund resources like tablets, workshop materials, and community events.</p>
+                <a href="volunteer.html" class="cta-button" aria-label="Join our community to support the elder mentorship program">Join Our Community</a>
+                <p>Join us in making a difference for our senior citizens. Together, we can ensure they remain active, connected, and valued members of our community.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer aria-label="Footer navigation">
+        <p>© 2025 Community Action Network. All Rights Reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

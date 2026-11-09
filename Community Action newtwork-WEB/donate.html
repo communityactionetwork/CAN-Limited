@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Community Action Network's mission with a donation to empower communities.">
+    <meta name="keywords" content="nonprofit, donate, community action, support, charity">
+    <meta name="author" content="Community Action Network">
+    <meta name="robots" content="index, follow">
+    <title>Community Action Network - Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="images/CAN LOGO.jpg">
+    <style>
+        /* Move inline styles to CSS for better maintainability */
+        body {
+            margin: 0;
+            font-family: 'Lora', serif;
+            background-color: #f7f9fc;
+            color: #1a1a1a;
+        }
+        header {
+            background-color: #003087;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        header img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 44px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 20px;
+            margin: 10px auto;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            max-width: 600px;
+        }
+        nav {
+            background-color: #0077b6;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 30px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff4d6d;
+            transform: scale(1.05);
+        }
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #4a4a4a;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            border-color: #0077b6;
+            outline: none;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #d0004f;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #003087;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        footer a {
+            color: #0077b6;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        footer a:hover {
+            color: #ff4d6d;
+            transform: scale(1.05);
+        }
+        .error {
+            color: #d0004f;
+            font-size: 14px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 32px; }
+            nav a { margin: 0 15px; font-size: 16px; }
+            section { padding: 40px 20px; }
+            section h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="images/CAN LOGO.jpg" alt="Community Action Network Logo" style="border-radius: 13px;">
+        <h1>Community Action Network</h1>
+        <p>Help Our Future Generation Thrive</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog & News</a>
+        <a href="volunteer.html">Get Involved</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Donation Section -->
+    <section>
+        <h2>Support Our Mission</h2>
+        <div>
+            <p>Your donation fuels our efforts to provide education, healthcare, and economic opportunities to those in need. Every contribution makes a difference.</p>
+            <form id="donation-form" aria-label="Donation Form">
+                <label for="amount">Donation Amount ($)</label>
+                <input type="number" id="amount" placeholder="Enter amount" min="1" required aria-describedby="amount-error">
+                <p id="amount-error" class="error">Please enter a valid donation amount.</p>
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="Full Name" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <button type="submit">Donate Now</button>
+            </form>
+            <p style="font-size: 14px; color: #6b7280; margin-top: 25px;">All donations are processed securely via Stripe. Your information is safe with us.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Community Action Network. All Rights Reserved.</p>
+        <p style="margin: 20px 0;">
+            <a href="contact.html">Contact Us</a>
+            <a href="donate.html">Donate</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="documents/Memorandum CAN.pdf" target="_blank" style="color: #0077b6; text-decoration: none; margin: 0 20px; transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='#ff4d6d'; this.style.transform='scale(1.05)';" onmouseout="this.style.color='#0077b6'; this.style.transform='scale(1)';">Memorandum</a>
+        </p>
+    </footer>
+
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripe = Stripe('your-publishable-key-here');
+        const form = document.getElementById('donation-form');
+        const amountInput = document.getElementById('amount');
+        const amountError = document.getElementById('amount-error');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const amount = parseFloat(amountInput.value);
+
+            if (isNaN(amount) || amount <= 0) {
+                amountError.style.display = 'block';
+                return;
+            }
+            amountError.style.display = 'none';
+
+            const name = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+
+            try {
+                const response = await fetch('/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ amount: amount * 100, name, email })
+                });
+                const session = await response.json();
+                const result = await stripe.redirectToCheckout({ sessionId: session.id });
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again later.');
+            }
+        });
+    </script>
+</body>
+</html>

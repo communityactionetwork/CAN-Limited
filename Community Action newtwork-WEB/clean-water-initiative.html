@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the Community Action Network's Clean Water Initiative, providing safe drinking water to over 500 households in three villages.">
+    <meta name="keywords" content="clean water, water purification, community action, nonprofit, sustainability">
+    <meta name="author" content="Community Action Network">
+    <meta name="robots" content="index, follow">
+    <title>Clean Water Initiative Launched - Community Action Network</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* CSS Variables for Consistent Theming */
+        :root {
+            --primary-color: #003087;
+            --secondary-color: #0077b6;
+            --accent-color: #ff4d6d;
+            --background-color: #f7f9fc;
+            --text-color: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --shadow-light: 0 6px 16px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Global Reset and Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Utility Classes */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 4rem 1.5rem;
+            box-shadow: var(--shadow-light);
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        nav a:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 1.5rem;
+            background-color: #fff;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        /* Article Card Styles */
+        .blog-card {
+            background-color: var(--background-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-card img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .blog-card img:hover {
+            transform: scale(1.02);
+        }
+
+        .blog-card .date {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .blog-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card a {
+            display: inline-block;
+            color: white;
+            background-color: var(--secondary-color);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .blog-card a:hover, .blog-card a:focus {
+            background-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .blog-card a:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer li {
+            margin: 0 1.5rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        footer a:hover, footer a:focus {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        footer a:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+
+            header h1 {
+                font-size: clamp(1.75rem, 4vw, 2rem);
+            }
+
+            header p {
+                font-size: clamp(0.875rem, 2.5vw, 1rem);
+            }
+
+            nav li {
+                margin: 0 0.75rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .blog-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0.75rem 0;
+            }
+
+            h2 {
+                font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+            }
+
+            .blog-card img {
+                max-height: 300px;
+            }
+        }
+
+        /* Accessibility Enhancements */
+        a:focus, button:focus, [role="button"]:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header aria-labelledby="site-title">
+        <img src="images/CAN LOGO.jpg" alt="Community Action Network logo featuring a blue and green globe with a community silhouette" width="160" height="auto" loading="lazy">
+        <h1 id="site-title">Community Action Network</h1>
+        <p>Help Our Future Generation Thrive</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="page1.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html" aria-current="page">Blog & News</a></li>
+            <li><a href="volunteer.html">Get Involved</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section aria-labelledby="article-heading">
+            <h2 id="article-heading">Clean Water Initiative Launched</h2>
+            <article class="blog-card">
+                <img src="images/cleanwater.jpg" alt="Villagers accessing clean water from a newly installed purification system" width="100%" height="auto" loading="lazy">
+                <p class="date">July 15, 2025</p>
+                <p>Our new clean water project has successfully installed water purification systems in three villages, providing safe drinking water to over 500 households. This initiative addresses the critical need for clean water, reducing waterborne diseases and improving community health. Our team worked closely with local leaders to ensure the systems are sustainable and accessible, with ongoing maintenance plans in place.</p>
+                <p>The project was funded through generous donations and volunteer efforts, showcasing the power of community collaboration. We plan to expand this initiative to more villages in the coming years, ensuring every family has access to safe water.</p>
+                <a href="donate.html" aria-label="Support our clean water initiatives">Support This Cause</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer aria-label="Footer navigation">
+        <p>© 2025 Community Action Network. All Rights Reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
